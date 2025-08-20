@@ -75,6 +75,8 @@ sudo docker compose up
 ```
 ## Power Management
 
+Follow this article to user powertop: https://rhea.dev/articles/2017-07/Home-server-Power-saving
+
 ## Remote Access
 
 
