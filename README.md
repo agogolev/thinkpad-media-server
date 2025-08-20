@@ -4,10 +4,8 @@ I used an old ThinkPad X230 because I happened to have one. It had already been 
 
 ## OS and Paritions
 
-Download the latest xubuntu minimal distro and create a bootable thumb drive:
-```
-Download the latest Xubuntu minimal distro and create a bootable thumb drive:
-```
+Download the latest xubuntu minimal distro and create a bootable thumb drive: [xubuntu.org](https://xubuntu.org)
+
 Install Xubuntu on a small partition, leaving the rest for the media partition that will be mounted to `/srv/media`. We want `/srv/media` to be on a separate partition so that OS upgrades or changes don't affect the media library.
 
 Here is what my partitions look like in GParted:
@@ -73,11 +71,17 @@ Bring up the docker container
 ```
 sudo docker compose up
 ```
+
+### This is it!
+
+The Jellyfin should show up on your local network: http://192.168.1.110:3923
+Access it via Jellyfin app from your devices or directly via http on any browser.
+
+
 ## Power Management
 
-Follow this article to user powertop: https://rhea.dev/articles/2017-07/Home-server-Power-saving
+Follow [rhea.dev](https://rhea.dev/articles/2017-07/Home-server-Power-saving) article to use powertop, if you want to be fancy about power usage. 
 
-## Remote Access
 
 
 
