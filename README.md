@@ -72,6 +72,16 @@ Bring up the docker container
 sudo docker compose up
 ```
 
+### Disable sleep on lid close
+
+```
+sudo nano /etc/systemd/logind.conf
+```
+
+set HandleLidSwitch=ignore, LidSwitchIgnoreInhibited=no
+
+Run `sudo service systemd-logind restart` for changes to take place.
+
 ### This is it!
 
 The Jellyfin should show up on your local network: http://192.168.1.110:3923
