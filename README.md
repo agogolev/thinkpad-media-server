@@ -78,7 +78,7 @@ sudo docker compose up
 sudo nano /etc/systemd/logind.conf
 ```
 
-set HandleLidSwitch=ignore, LidSwitchIgnoreInhibited=no
+set `HandleLidSwitch=ignore`, `LidSwitchIgnoreInhibited=no`, `HandleLidSwitchExternalPower=ignore`
 
 Run `sudo service systemd-logind restart` for changes to take place.
 
