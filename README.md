@@ -93,7 +93,7 @@ If this is your first time, you may be asked to choose a text editor.
 
 Add the cron job line to the end of the file:
 ```
-0 0 * * * sudo
+0 0 * * * sudo docker restart jellyfin
 ```
 
 Save and exit the editor. Cron will automatically update the schedule.
