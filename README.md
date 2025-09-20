@@ -72,7 +72,7 @@ Bring up the docker container
 sudo docker compose up
 ```
 
-### Disable sleep on lid close
+### Disable Sleep on Lid Close
 
 ```
 sudo nano /etc/systemd/logind.conf
@@ -81,6 +81,22 @@ sudo nano /etc/systemd/logind.conf
 set HandleLidSwitch=ignore, LidSwitchIgnoreInhibited=no
 
 Run `sudo service systemd-logind restart` for changes to take place.
+
+### Restart Jellyfin Every Day
+
+Open your crontab file for editing by running the following command in your terminal. You'll likely need to use sudo to ensure the cron job has the necessary permissions to manage Docker.
+```
+sudo crontab -e
+```
+
+If this is your first time, you may be asked to choose a text editor.
+
+Add the cron job line to the end of the file:
+```
+0 0 * * * sudo
+```
+
+Save and exit the editor. Cron will automatically update the schedule.
 
 ### This is it!
 
